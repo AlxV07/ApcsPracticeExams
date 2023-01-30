@@ -1,8 +1,9 @@
 public class problem1a {
-    /* Write a method called isValid, which returns true
-       if the password is valid nd false otherwise. A
-       password is considered valid if:
-       - Its length is a valid length.
+    /*
+    Write a method called isValid, which returns true
+    if the password is valid nd false otherwise. A
+    password is considered valid if:
+    - Its length is a valid length.
        - It contains at least one uppercase letter, one
          lowercase letter, and one symbol.
      */
@@ -13,7 +14,7 @@ public class problem1a {
     String lower = "abcdefghijklmnopqrstuvwxyz";
     String symbols = "!@#$%^&*";
 
-    // Variables above this line are provided by the test.
+    // All above this line are provided by the test.
 
     public boolean isValid(String password) {
         if (password.length() >= minLength && password.length() <= maxLength) {
