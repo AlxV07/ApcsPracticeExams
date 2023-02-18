@@ -8,8 +8,8 @@ public class problem1a {
          lowercase letter, and one symbol.
      */
 
-    int minLength = 0;
-    int maxLength = 0;
+    int minLength;
+    int maxLength;
     String upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     String lower = "abcdefghijklmnopqrstuvwxyz";
     String symbols = "!@#$%^&*";

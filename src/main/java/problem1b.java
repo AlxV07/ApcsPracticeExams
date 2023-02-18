@@ -10,15 +10,21 @@ public class problem1b {
       from the upper, lower, and symbol Strings.
      */
 
-    int minLength = 0;
-    int maxLength = 0;
+    int minLength;
+    int maxLength;
     String upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     String lower = "abcdefghijklmnopqrstuvwxyz";
     String symbols = "!@#$%^&*";
 
-    problem1a isValid = new problem1a(6, 12515);
+    problem1a isValid;
 
     // All above this line are provided by the test.
+
+    public problem1b(int minLength, int maxLength) {
+        this.minLength = minLength;
+        this.maxLength = maxLength;
+        isValid = new problem1a(minLength, maxLength);
+    }
 
     public String generatePassword() {
         String bank = upper+lower+symbols;
