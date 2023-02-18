@@ -16,7 +16,7 @@ public class problem1b {
     String lower = "abcdefghijklmnopqrstuvwxyz";
     String symbols = "!@#$%^&*";
 
-    problem1a isValid = new problem1a();
+    problem1a isValid = new problem1a(6, 12515);
 
     // All above this line are provided by the test.
 

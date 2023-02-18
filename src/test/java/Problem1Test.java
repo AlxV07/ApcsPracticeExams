@@ -10,7 +10,7 @@ public class Problem1Test {
 	@BeforeEach
 	void setup () {
 		// TODO: the constructor needs to initialize minLength and maxLength
-		target = new problem1a();
+		target = new problem1a(6, 124125);
 	}
 
 	@Test
@@ -19,14 +19,16 @@ public class Problem1Test {
 		// TODO: Test capital letter
 		// TODO: Test lowercase letters
 		// TODO: Test number
+
+
 		for (String invalidCandidate : new String[]{
-				"abc", "123", "ABC", "#$@!"
+				"abc", "123", "ABC", "#$@!", "aB$5", "d6$G", "hI7$l"
 		}) {
 			assertFalse(target.isValid(invalidCandidate));
 		}
 
 		for (String validCandidate : new String[]{
-				"A"
+				"eN$p8r", "sT$v0xyz"
 		}) {
 			assertTrue(target.isValid(validCandidate));
 		}
