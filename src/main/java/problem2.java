@@ -15,7 +15,7 @@ public class problem2 {
 
     //All above this line are provided by the test.
 
-    public class ISBN {
+    public static class ISBN {
         String num;
         public ISBN(int num) {
             this.num = String.valueOf(num);
@@ -25,7 +25,7 @@ public class problem2 {
             for (int i = 0; i < num.length(); i++) {
                 a+= Integer.parseInt(num.substring(i, i+1))*(10-i);
             }
-            return 11 - (a % 11) == 10 ? "X" : String.valueOf(a);
+            return 11 - (a % 11) == 10 ? "X" : String.valueOf(11 - (a%11));
         }
 
         public String generateNumber() {
