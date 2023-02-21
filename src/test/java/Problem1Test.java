@@ -1,8 +1,11 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.BinaryOperator;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class Problem1Test {
 	problem1a aTarget;
@@ -41,5 +44,41 @@ public class Problem1Test {
 		for (String shouldBeValid : new String[]{
 				bTarget.generatePassword(), bTarget.generatePassword(), bTarget.generatePassword()
 		}) assertTrue(aTarget.isValid(shouldBeValid));
+	}
+
+	@Test
+	void shouldUseAllCharsWithEqualProbability() {
+		String alphabet = bTarget.lower + bTarget.symbols + bTarget.upper;
+		int nofChars = alphabet.length();
+		System.out.println("testing password alphabet with " + nofChars + " characters");
+
+		// We expect to generate roughly each character this many times after total runs
+		int expectedOccurrence = 10;
+		int totalRuns = expectedOccurrence * nofChars;
+		// Generate password for enough times and count occurrences for each char in the alphabet
+		Map<Character, Integer> result = new HashMap<>();
+		for (int i = 0; i < totalRuns; i++) {
+			String pass = bTarget.generatePassword();
+			for (char c : pass.toCharArray()) {
+				incrementCharCount(c, result);
+			}
+		}
+
+		int total = result.values().stream().reduce(0, Integer::sum);
+		// Verify that the count is close enough
+		for (char c : alphabet.toCharArray()) {
+			Integer count = result.get(c);
+			if (count == null) {
+				fail(String.format("Character [%c] has never been generated\n", c));
+			} else {
+				System.out.printf("Character [%c] has been generated [%d] times\n", c, count);
+				int expectedCount = total / nofChars;
+				assertTrue(count - expectedCount <= 0.01 * expectedCount);
+			}
+		}
+	}
+
+	private void incrementCharCount(char c, Map<Character, Integer> result) {
+		result.merge(c, 1, Integer::sum);
 	}
 }
