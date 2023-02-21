@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class problem3b {
+public class problem3 {
     /*
     Write a method called removeExcessTrainCars
     which removes Double objects, one at a time,
@@ -13,20 +13,32 @@ public class problem3b {
     removeExcessTrainCars.
      */
 
-    ArrayList<Double> trainCars = new ArrayList<>();
+    ArrayList<Double> trainCars;
+    double maximumWeight;
 
-    public static double getMaximumWeight() {return 0;}
-    problem3a getTotalWeight = new problem3a();
+    public double getMaximumWeight() {return maximumWeight;}
 
     // All above this line are provided by the test.
 
+    public problem3(double maximumWeight, ArrayList<Double> trainCars) {
+        this.maximumWeight = maximumWeight;
+        this.trainCars = trainCars;
+    }
+
+    public double getTotalWeight() {
+        double a = 0;
+        for (Double i : trainCars)
+            a +=i;
+        return a;
+    }
+
     public ArrayList<Double> removeExcessTrainCars() {
         ArrayList<Double> a = new ArrayList<>();
-        double b = getTotalWeight.getTotalWeight();
+        double b = getTotalWeight();
         while(b > getMaximumWeight()) {
             a.add(trainCars.get(trainCars.size()-1));
             trainCars.remove(trainCars.size()-1);
-            b = getTotalWeight.getTotalWeight();
+            b = getTotalWeight();
         }
         return a;
     }
