@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class problem1b {
     /*
     Write a method called generatePassword, which returns
@@ -29,9 +31,10 @@ public class problem1b {
     public String generatePassword() {
         String bank = upper+lower+symbols;
         StringBuilder password = new StringBuilder();
-        int a = (int) (maxLength -(Math.random()*(maxLength-minLength)));
-        for (int i = 0; i < a; i++) {
-            int x = (int) (Math.random() * bank.length());
+        Random random = new Random();
+        int passLength = maxLength - random.nextInt(maxLength - minLength);
+        for (int i = 0; i < passLength; i++) {
+            int x = random.nextInt(bank.length());
             password.append(bank.charAt(x));
         }
         return isValid.isValid(password.toString()) ? password.toString() : generatePassword();

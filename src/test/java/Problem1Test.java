@@ -73,7 +73,7 @@ public class Problem1Test {
 			} else {
 				System.out.printf("Character [%c] has been generated [%d] times\n", c, count);
 				int expectedCount = total / nofChars;
-				assertTrue(count - expectedCount <= 0.01 * expectedCount);
+				assertTrue(Math.abs(count - expectedCount) <= 0.005 * expectedCount);
 			}
 		}
 	}

@@ -7,7 +7,19 @@ public class problem4a {
     by columns array of Pixel objects.
      */
 
-    public class Pixel {public Pixel(int x, int y, int z){}}
+    public static class Pixel {
+        int x, y, z;
+        public Pixel(int x, int y, int z){
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+
+        @Override
+        public String toString() {
+            return "red: " + this.x +", green: "+ this.y + ", blue: "+this.z+" ";
+        }
+    }
 
     //All above this line are provided by the test.
 

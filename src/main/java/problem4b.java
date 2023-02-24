@@ -8,12 +8,10 @@ public class problem4b {
     flipped Pixel objects.
      */
 
-    public class Pixel {public Pixel(){}}
-
     //All above this line are provided by the test.
 
-    public Pixel[][] flipImage(Pixel[][] image, boolean horiz) {
-        Pixel[][] a = new Pixel[image.length][image[0].length];
+    public problem4a.Pixel[][] flipImage(problem4a.Pixel[][] image, boolean horiz) {
+        problem4a.Pixel[][] a = new problem4a.Pixel[image.length][image[0].length];
         for (int i = 0; i < a.length; i ++) {
             for (int j = 0; j < a[0].length; j++) {
                 if(horiz)
