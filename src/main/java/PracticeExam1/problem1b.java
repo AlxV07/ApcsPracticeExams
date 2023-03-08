@@ -1,3 +1,5 @@
+package PracticeExam1;
+
 import java.util.Random;
 
 public class problem1b {

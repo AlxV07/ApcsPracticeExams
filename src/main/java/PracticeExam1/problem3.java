@@ -1,3 +1,5 @@
+package PracticeExam1;
+
 import java.util.ArrayList;
 
 public class problem3 {

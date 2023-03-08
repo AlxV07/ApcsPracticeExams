@@ -1,7 +1,8 @@
+package PracticeExam1;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.Objects;
 
 public class Problem4Test {

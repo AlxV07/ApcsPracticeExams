@@ -1,9 +1,10 @@
+package PracticeExam1;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Problem3Test{
     problem3 problem3;
@@ -31,7 +32,7 @@ public class Problem3Test{
 
     @Test
     public void checkGetTotalWeightCalculatesCorrectly() {
-        assertEquals(19.613, problem3.getTotalWeight());
+        Assertions.assertEquals(19.613, problem3.getTotalWeight());
     }
 
     @Test
@@ -42,7 +43,7 @@ public class Problem3Test{
             add(4.0);
             add(3.0);
         }};
-        assertEquals(removedCars, problem3.removeExcessTrainCars());
-        assertEquals(removedCars1, problem3number2.removeExcessTrainCars());
+        Assertions.assertEquals(removedCars, problem3.removeExcessTrainCars());
+        Assertions.assertEquals(removedCars1, problem3number2.removeExcessTrainCars());
     }
 }

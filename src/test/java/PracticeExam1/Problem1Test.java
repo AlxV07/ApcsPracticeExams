@@ -1,11 +1,14 @@
+package PracticeExam1;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.BinaryOperator;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class Problem1Test {
 	problem1a aTarget;
@@ -29,13 +32,13 @@ public class Problem1Test {
 		for (String invalidCandidate : new String[]{
 				"abc", "123", "ABC", "#$@!", "aB$5", "d6$G", "hI7$l"
 		}) {
-			assertFalse(aTarget.isValid(invalidCandidate));
+			Assertions.assertFalse(aTarget.isValid(invalidCandidate));
 		}
 
 		for (String validCandidate : new String[]{
 				"eN$p8r", "sT$v0xyz"
 		}) {
-			assertTrue(aTarget.isValid(validCandidate));
+			Assertions.assertTrue(aTarget.isValid(validCandidate));
 		}
 	}
 
@@ -43,7 +46,7 @@ public class Problem1Test {
 	public void shouldGenerateValidPassword() {
 		for (String shouldBeValid : new String[]{
 				bTarget.generatePassword(), bTarget.generatePassword(), bTarget.generatePassword()
-		}) assertTrue(aTarget.isValid(shouldBeValid));
+		}) Assertions.assertTrue(aTarget.isValid(shouldBeValid));
 	}
 
 	@Test

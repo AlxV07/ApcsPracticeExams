@@ -1,3 +1,5 @@
+package PracticeExam1;
+
 public class problem4a {
     /*
     Given three arrays (reds, greens, blues) and

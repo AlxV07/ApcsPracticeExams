@@ -1,3 +1,5 @@
+package PracticeExam1;
+
 public class problem4b {
     /*
     Write a method called flipImage, which

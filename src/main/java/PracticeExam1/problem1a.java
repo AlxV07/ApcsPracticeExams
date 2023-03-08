@@ -1,3 +1,5 @@
+package PracticeExam1;
+
 public class problem1a {
     /*
     Write a method called isValid, which returns true

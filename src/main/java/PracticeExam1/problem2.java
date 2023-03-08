@@ -1,3 +1,5 @@
+package PracticeExam1;
+
 public class problem2 {
     /*
     Write a complete ISBN class, including the
