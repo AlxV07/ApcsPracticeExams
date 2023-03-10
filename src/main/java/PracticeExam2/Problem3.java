@@ -2,6 +2,12 @@ package PracticeExam2;
 
 import java.util.ArrayList;
 
+/*
+    A factory keeps track of its printing machines in array machines, and it keeps track of its paper supply
+    int two lists: newRolls and usedRolls. At the beginning of the day, usedRolls is emptied of all paper remnants and
+    newRolls is refilled.
+ */
+
 public class Problem3 {
     class Machine {
         private PaperRoll paper;
