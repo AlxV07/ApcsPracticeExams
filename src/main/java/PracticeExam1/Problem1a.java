@@ -1,6 +1,6 @@
 package PracticeExam1;
 
-public class problem1a {
+public class Problem1a {
     /*
     Write a method called isValid, which returns true
     if the password is valid and false otherwise. A
@@ -17,7 +17,7 @@ public class problem1a {
     String symbols = "!@#$%^&*";
 
     // All above this line are provided by the test.
-    public problem1a(int minLength, int maxLength) {
+    public Problem1a(int minLength, int maxLength) {
         this.minLength = minLength;
         this.maxLength = maxLength;
     }

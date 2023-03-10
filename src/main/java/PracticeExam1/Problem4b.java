@@ -1,6 +1,6 @@
 package PracticeExam1;
 
-public class problem4b {
+public class Problem4b {
     /*
     Write a method called flipImage, which
     takes a 2D array of Pixel objects and a
@@ -12,8 +12,8 @@ public class problem4b {
 
     //All above this line are provided by the test.
 
-    public problem4a.Pixel[][] flipImage(problem4a.Pixel[][] image, boolean horiz) {
-        problem4a.Pixel[][] a = new problem4a.Pixel[image.length][image[0].length];
+    public Problem4a.Pixel[][] flipImage(Problem4a.Pixel[][] image, boolean horiz) {
+        Problem4a.Pixel[][] a = new Problem4a.Pixel[image.length][image[0].length];
         for (int i = 0; i < a.length; i ++) {
             for (int j = 0; j < a[0].length; j++) {
                 if(horiz)

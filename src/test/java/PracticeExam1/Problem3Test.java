@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 public class Problem3Test{
-    problem3 problem3;
-    problem3 problem3number2;
+    Problem3 problem3;
+    Problem3 problem3Number2;
 
     @BeforeEach
     public void setup() {
@@ -26,8 +26,8 @@ public class Problem3Test{
             add(4.0);
             add(9.613);
         }};
-        problem3 = new problem3(10, arrayList);
-        problem3number2 = new problem3(5, arrayList2);
+        problem3 = new Problem3(10, arrayList);
+        problem3Number2 = new Problem3(5, arrayList2);
     }
 
     @Test
@@ -44,6 +44,6 @@ public class Problem3Test{
             add(3.0);
         }};
         Assertions.assertEquals(removedCars, problem3.removeExcessTrainCars());
-        Assertions.assertEquals(removedCars1, problem3number2.removeExcessTrainCars());
+        Assertions.assertEquals(removedCars1, problem3Number2.removeExcessTrainCars());
     }
 }

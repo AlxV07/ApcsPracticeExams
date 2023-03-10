@@ -6,13 +6,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Problem2Test {
-    problem2.ISBN isbn;
-    problem2.ISBN isbn2;
+    Problem2.ISBN isbn;
+    Problem2.ISBN isbn2;
 
     @BeforeEach
     public void setup() {
-        isbn = new problem2.ISBN(126045491);
-        isbn2 = new problem2.ISBN(900006001);
+        isbn = new Problem2.ISBN(126045491);
+        isbn2 = new Problem2.ISBN(900006001);
     }
 
     @Test

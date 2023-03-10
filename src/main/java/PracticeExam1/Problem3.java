@@ -2,7 +2,7 @@ package PracticeExam1;
 
 import java.util.ArrayList;
 
-public class problem3 {
+public class Problem3 {
     /*
     Write a method called removeExcessTrainCars
     which removes Double objects, one at a time,
@@ -22,7 +22,7 @@ public class problem3 {
 
     // All above this line are provided by the test.
 
-    public problem3(double maximumWeight, ArrayList<Double> trainCars) {
+    public Problem3(double maximumWeight, ArrayList<Double> trainCars) {
         this.maximumWeight = maximumWeight;
         this.trainCars = trainCars;
     }

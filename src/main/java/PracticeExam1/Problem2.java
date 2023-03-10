@@ -1,6 +1,6 @@
 package PracticeExam1;
 
-public class problem2 {
+public class Problem2 {
     /*
     Write a complete ISBN class, including the
     constructor and any required instance

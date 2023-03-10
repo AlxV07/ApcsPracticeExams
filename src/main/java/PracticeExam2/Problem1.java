@@ -1,6 +1,6 @@
 package PracticeExam2;
 
-public class problem1 {
+public class Problem1 {
 
     /*
    To represent a given number as a Location Numeral (LN), the number is expressed as the sum of powers of two with each power of two replaced by its corresponding letter.
@@ -13,8 +13,6 @@ public class problem1 {
     Problem 1b) Write the method getDecimalValue that takes an LN and returns its decimal value.
     Problem 1c) Write the method buildLocationNumeral that takes a decimal value and returns the LN representation of that decimal value.
      */
-
-    // All above this line are provided by the test.
 
     String bank = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

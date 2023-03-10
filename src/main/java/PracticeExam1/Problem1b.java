@@ -2,7 +2,7 @@ package PracticeExam1;
 
 import java.util.Random;
 
-public class problem1b {
+public class Problem1b {
     /*
     Write a method called generatePassword, which returns
     a String representing a valid password. In writing
@@ -20,14 +20,14 @@ public class problem1b {
     String lower = "abcdefghijklmnopqrstuvwxyz";
     String symbols = "!@#$%^&*";
 
-    problem1a isValid;
+    Problem1a isValid;
 
     // All above this line are provided by the test.
 
-    public problem1b(int minLength, int maxLength) {
+    public Problem1b(int minLength, int maxLength) {
         this.minLength = minLength;
         this.maxLength = maxLength;
-        isValid = new problem1a(minLength, maxLength);
+        isValid = new Problem1a(minLength, maxLength);
     }
 
     public String generatePassword() {

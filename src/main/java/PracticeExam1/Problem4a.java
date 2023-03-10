@@ -1,6 +1,6 @@
 package PracticeExam1;
 
-public class problem4a {
+public class Problem4a {
     /*
     Given three arrays (reds, greens, blues) and
     the Pixel and AlterImage classes, implement
