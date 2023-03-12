@@ -24,23 +24,25 @@ public class Problem1a {
 
     public boolean isValid(String password) {
         if (password.length() >= minLength && password.length() <= maxLength) {
-            int a = 0;
-            String check = "";
-            for (int i = 0; i < 3; i++) {
-                switch (i) {
-                    case 0 -> check = upper;
-                    case 1 -> check = lower;
-                    case 2 -> check = symbols;
-                }
-                for (int j = 0; j < password.length(); j++) {
-                    if (check.contains(password.substring(j, j + 1))) {
-                        a++;
-                        break;
+            boolean hasUpper = false;
+            boolean hasLower = false;
+            boolean hasSymbol = false;
+            for (int j = 0; j < password.length(); j++) {
+                if (hasUpper && hasLower && hasSymbol) {
+                    break;
+                } else {
+                    if (upper.contains(password.substring(j, j + 1))) {
+                        hasUpper = true;
+                    } else if (lower.contains(password.substring(j, j + 1))) {
+                        hasLower = true;
+                    } else if (symbols.contains(password.substring(j, j + 1))) {
+                        hasSymbol = true;
                     }
                 }
             }
-            return a==3;
+            return hasUpper && hasLower && hasSymbol;
+        } else {
+            return false;
         }
-        return false;
     }
 }
